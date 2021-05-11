@@ -19,7 +19,7 @@ class MathFxns {
     divideTwoNums(num1, num2) {
         return num1/num2
     }
-    addNums(...rest) {
+    addAllNums(...rest) {
         return rest.reduce((sum,val)=> sum+=val)
     }
     isPrime(num) {

@@ -20,60 +20,63 @@ describe('functions \n',()=>{
         console.log(`\n...Completed functional test ${numTest++}!\n`);
     })
 
-    describe('add two numbers',()=>{
-        it('should return the sum of two numbers',()=>{
-            const num1 = 5;
-            const num2 = 11;
-            const sum = 16;
-            assert.ok(math.addTwoNums(num1, num2) === sum);
-        });
+    describe('addTwoNums', () => {
+      it('should return the sum of two numbers', () => {
+        const num1 = 5;
+        const num2 = 11;
+        const sum = 16;
+        assert.ok(math.addTwoNums(num1, num2) === sum);
+      });
     });
 
-    describe('subtract two numbers',()=>{
-        it('should return the sum of all numbers',()=>{
-            const num1 = 11;
-            const num2 = 5;
-            const answer = 6;
-            assert.equal(math.subtractTwoNums(num1, num2), answer);
-        });
+    describe('subtractTwoNums', () => {
+      it('should return the sum of all numbers', () => {
+        const num1 = 11;
+        const num2 = 5;
+        const answer = 6;
+        assert.equal(math.subtractTwoNums(num1, num2), answer);
+      });
     });
 
-    describe('division',()=>{
-        it('should return the quotient of two numbers',()=>{
-            const num1 = 15;
-            const num2 = 5;
-            const quotient = 3;
-            assert.deepEqual(math.divideTwoNums(num1,num2), quotient);
-        })
+    describe('divideTwoNums', () => {
+      it('should return the quotient of two numbers', () => {
+        const num1 = 15;
+        const num2 = 5;
+        const quotient = 3;
+        assert.deepEqual(math.divideTwoNums(num1, num2), quotient);
+      });
     });
 
-    describe('division',()=>{
-        it('should return the product of two numbers',()=>{
-            const num1 = 15;
-            const num2 = 5;
-            const product = 75;
-            expect(math.multiplyTwoNums(num1,num2)).to.equal(product);
-        })
+    describe('multiplyTwoNums', () => {
+      it('should return the product of two numbers', () => {
+        const num1 = 15;
+        const num2 = 5;
+        const product = 75;
+        expect(math.multiplyTwoNums(num1, num2)).to.equal(product);
+      });
     });
 
-    describe('add all numbers',()=>{
-        it('should return the sum of all numbers',()=>{
-            const numsArr = [4,63,5,17,8];
-            const sum = 97;
-            expect(math.addNums(...numsArr)).to.equal(sum);
-        });
+    describe('addAllNums', () => {
+      it('should return the sum of all numbers', () => {
+        const numsArr = [4, 63, 5, 17, 8];
+        const sum = 97;
+        expect(math.addAllNums(...numsArr)).to.equal(sum);
+      });
     });
 
-    describe('is prime',()=>{
-        it('should return true or false',()=>{
-            const num = 5;
-            expect(math.isPrime(num)).to.equal(true);
-        });
-        it('should throw an error if negative',()=>{
-            const num = -5;
-            const sum = 16;
-            expect(() => math.isPrime(num)).to.throw(Error,"Number is not positive!");
-        })
+    describe('isPrime', () => {
+      it('should return true or false', () => {
+        const num = 5;
+        expect(math.isPrime(num)).to.equal(true);
+      });
+      it('should throw an error if negative', () => {
+        const num = -5;
+        const sum = 16;
+        expect(() => math.isPrime(num)).to.throw(
+          Error,
+          'Number is not positive!'
+        );
+      });
     });
 
     describe('factor',()=>{
