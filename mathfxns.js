@@ -1,7 +1,12 @@
-// https://devhints.io/chai
 // https://devhints.io/mocha
 
 class MathFxns {
+    constructor() {
+        this._name = 'MathFxns';
+    }
+    
+    get name() { return this._name; }
+
     addTwoNums(num1,num2){
         return num1+num2
     }

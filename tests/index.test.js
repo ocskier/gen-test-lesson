@@ -1,4 +1,4 @@
-const expect = require('chai').expect;
+const { assert, expect } = require('chai');
 const MathFxns = require('../mathfxns.js');
 const math = new MathFxns();
 
@@ -8,6 +8,7 @@ describe('class constructor \n',()=>{
     })
     it('should create an instance of the class',()=>{
         const newInstance = new MathFxns();
+        console.log(`   Creating a ${newInstance.name} class for testing!`)
         expect(newInstance).to.be.a('object');
     })
 })
@@ -24,7 +25,7 @@ describe('functions \n',()=>{
             const num1 = 5;
             const num2 = 11;
             const sum = 16;
-            expect(math.addTwoNums(num1,num2)).to.equal(sum);
+            assert.ok(math.addTwoNums(num1, num2) === sum);
         });
     });
 
@@ -33,7 +34,7 @@ describe('functions \n',()=>{
             const num1 = 11;
             const num2 = 5;
             const answer = 6;
-            expect(math.subtractTwoNums(num1,num2)).to.equal(answer);
+            assert.equal(math.subtractTwoNums(num1, num2), answer);
         });
     });
 
@@ -42,7 +43,7 @@ describe('functions \n',()=>{
             const num1 = 15;
             const num2 = 5;
             const quotient = 3;
-            expect(math.divideTwoNums(num1,num2)).to.equal(quotient);
+            assert.deepEqual(math.divideTwoNums(num1,num2), quotient);
         })
     });
 
