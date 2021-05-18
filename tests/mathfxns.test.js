@@ -4,6 +4,7 @@ const MathFxns = require('../mathfxns.js');
 const math = new MathFxns();
 
 describe('class constructor \n', () => {
+  // add a test hook
   afterEach(() => {
     console.log('\n...Completed class instance test!\n');
   });
@@ -15,7 +16,7 @@ describe('class constructor \n', () => {
 });
 
 describe('functions \n', () => {
-  // add a test hook
+  // add a test hook demo
   var numTest = 1;
   afterEach(() => {
     console.log(`\n...Completed functional test ${numTest++}!\n`);
