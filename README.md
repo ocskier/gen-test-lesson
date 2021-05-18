@@ -17,7 +17,7 @@ Unit Testing Assignment
     ```
 
     ```bash
-    npm run tests
+    npm run test
     ```
   
 2. Work together to add appropiate tests for this activity, one by one. If you get stuck, don't forget to use your Google-Fu and problem solving skills. TA's will be hopping into each room to check in, message one of us on Slack for specific help.
