@@ -1,7 +1,6 @@
 const { assert, expect } = require('chai');
-const { describe, it } = require('mocha');
+const { describe, it, afterEach } = require('mocha');
 const MathFxns = require('../mathfxns.js');
-const math = new MathFxns();
 
 describe('class constructor \n', () => {
   // add a test hook
@@ -24,6 +23,7 @@ describe('functions \n', () => {
 
   describe('addTwoNums', () => {
     it('should return the sum of two numbers', () => {
+      const math = new MathFxns();
       const num1 = 5;
       const num2 = 11;
       const sum = 16;
@@ -33,6 +33,7 @@ describe('functions \n', () => {
 
   describe('subtractTwoNums', () => {
     it('should return the sum of all numbers', () => {
+      const math = new MathFxns();
       const num1 = 11;
       const num2 = 5;
       const answer = 6;
@@ -42,6 +43,7 @@ describe('functions \n', () => {
 
   describe('divideTwoNums', () => {
     it('should return the quotient of two numbers', () => {
+      const math = new MathFxns();
       const num1 = 15;
       const num2 = 5;
       const quotient = 3;
@@ -51,6 +53,7 @@ describe('functions \n', () => {
 
   describe('multiplyTwoNums', () => {
     it('should return the product of two numbers', () => {
+      const math = new MathFxns();
       const num1 = 15;
       const num2 = 5;
       const product = 75;
@@ -60,6 +63,7 @@ describe('functions \n', () => {
 
   describe('addAllNums', () => {
     it('should return the sum of all numbers', () => {
+      const math = new MathFxns();
       const numsArr = [4, 63, 5, 17, 8];
       const sum = 97;
       expect(math.addAllNums(...numsArr)).to.equal(sum);
@@ -68,10 +72,12 @@ describe('functions \n', () => {
 
   describe('isPrime', () => {
     it('should return true or false', () => {
+      const math = new MathFxns();
       const num = 5;
       expect(math.isPrime(num)).to.equal(true);
     });
     it('should throw an error if negative', () => {
+      const math = new MathFxns();
       const num = -5;
       assert.throws(() => math.isPrime(num), 'Number is not positive!');
       // expect(() => math.isPrime(num)).to.throw(
@@ -83,11 +89,13 @@ describe('functions \n', () => {
 
   describe('factor', () => {
     it('should return an array', () => {
+      const math = new MathFxns();
       const num = 12;
       const factors = [1, 2, 3, 4, 6, 12];
       expect(math.factor(num)).to.be.a('array');
     });
     it('should return all the factors of the number', () => {
+      const math = new MathFxns();
       const num = 16;
       const factors = [1, 2, 4, 8, 16];
       assert.sameMembers(math.factor(num), factors);
